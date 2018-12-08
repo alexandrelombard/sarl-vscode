@@ -1,0 +1,1 @@
+java -jar %~dp0\sarl-language-server.jar

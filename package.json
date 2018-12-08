@@ -1,0 +1,58 @@
+{
+    "name": "sarl-extension",
+    "description": "SARL extension for VSCode",
+    "author": "SARL.io",
+    "license": "EPL-1.0",
+    "icon": "images/sarl.png",
+    "version": "0.8.6",
+    "publisher": "alombard0214",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sarl/sarl"
+    },
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "scripts": {
+        "update-vscode": "vscode-install",
+        "postinstall": "vscode-install"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^5.1.0"
+    },
+    "devDependencies": {
+        "vscode": "^1.1.21",
+        "typescript": "^2.9.2",
+        "@types/node": "^10.11.5"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:sarl"
+    ],
+    "main": "out/extension",
+    "contributes": {
+        "languages": [
+            {
+                "id": "sarl",
+                "aliases": [
+                    "sarl",
+                    "SARL"
+                ],
+                "extensions": [
+                    ".sarl"
+                ],
+                "configuration": "./sarl.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "sarl",
+                "scopeName": "source.sarl",
+                "path": "./syntaxes/sarl.tmLanguage"
+            }
+        ],
+        "commands": []
+    }
+}
