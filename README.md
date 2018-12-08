@@ -1,6 +1,6 @@
-# sarl README
+# SARL README
 
-This is the README for the extension "sarl".
+Visual Studio Code support the SARL multiagent programming language.
 
 ## Features
 
