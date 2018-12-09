@@ -1,2 +1,4 @@
 *.jar
 *.vsix
+out/**
+node_modules/**
