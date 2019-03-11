@@ -10,6 +10,11 @@ Support SARL language.
 
 VS Code > 1.29.0
 
+## Installation
+
+npm install -g typescript
+npm install
+
 ## Release Notes
 
 Initial release

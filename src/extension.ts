@@ -38,6 +38,19 @@ export function activate(context: ExtensionContext) {
      // enable tracing (.Off, .Messages, Verbose)
      lc.trace = Trace.Verbose;
      let disposable = lc.start();
+
+     // Getting maven instance
+     const mvn = require('maven').create({
+        cwd: workspace
+     });
+
+     // Register commands
+     commands.registerCommand('extension.mavenCompile', () => {
+        window.showInformationMessage('Starting mvn compile...');
+        mvn.execute(['compile']).then(() => {
+            window.showInformationMessage('mvn compile completed successfully');
+        });
+     });
      
      // Push the disposable to the context's subscriptions so that the 
      // client can be deactivated on extension deactivation
